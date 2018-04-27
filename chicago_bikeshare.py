@@ -208,12 +208,12 @@ list_size = len(trip_duration_list)
 trip_duration_list.sort()
 
 if list_size%2 == 0:
-    median_trip = (trip_duration_list[list_size // 2 - 1] + trip_duration_list[list_size // 2]) / 2
+    median_trip = round((trip_duration_list[list_size // 2 - 1] + trip_duration_list[list_size // 2]) / 2)
 else:
     median_trip = trip_duration_list[list_size // 2]
 min_trip = trip_duration_list[0]
 max_trip = trip_duration_list[-1]
-mean_trip = sum(trip_duration_list)/list_size
+mean_trip = round(sum(trip_duration_list)/list_size)
 
 print("\nTASK 9: Printing the min, max, mean and median")
 print("Min: ", min_trip, "Max: ", max_trip, "Mean: ", mean_trip, "Median: ", median_trip)
